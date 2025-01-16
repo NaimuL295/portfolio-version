@@ -40,7 +40,6 @@ background-color:#FFF8F3 ;
 font-size: 18px;
 color:#757575;
 }
-
 header{
     background-image: url("/images/developer.png"),url("../images/header_bg.png");
 background-repeat: no-repeat;
@@ -79,8 +78,7 @@ nav li a{
   margin: 0 35px 0 200px;
 }
 .banner-content{
-    max-width:500px ;
-    
+    max-width:500px ; 
 }
 
 .banner-greetings{
@@ -135,7 +133,7 @@ justify-content: space-around;
 /* section   skill style */
 
 .skills-container{
-display: flex;
+display:flex;
 gap: 25px;
 
 }
@@ -186,5 +184,51 @@ input[type="name"], footer input[type="email"] ,footer textarea{
     display: block;
     width: 100%;
     padding:10px  20px;
-    
+}
+/* responsive style */
+.hide{
+    display: none;
+}
+@media screen and (max-width:576px) {
+    .banner , 
+    .skills-container,
+    .resume-container,
+     footer, 
+     .about-items,
+     nav,
+     nav> ul{
+        flex-direction:column;
+    }
+header{
+    background-image: none;
+}
+    .banner{
+        margin: 10px;
+    }
+    footer,.about{
+        padding: 10px 10px;
+    }
+    .banner-profile-image{
+        width: 100%;
+    }
+    nav>ul{
+gap: 10px;
+    }
+    .footer-column{
+       /* margin: 0 auto; */
+        width: 100%;
+    }
+    input[type="name"], 
+    footer input[type="email"] ,
+    footer textarea{
+     width: calc(100% - 40px);
+    }
+    .btn-primary{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width:576px) and (max-width:990px){
+.banner{
+    flex-direction: column;
+}  
 }
